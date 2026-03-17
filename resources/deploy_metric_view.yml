@@ -3,7 +3,7 @@ resources:
     deploy_billing_metric_view:
       name: "[${bundle.target}] Deploy Billing Usage Metric View"
       tasks:
-        - task_key: "create_metric_view_updated_key"
+        - task_key: "create_metric_view"
           sql_task:
             file:
               path: ../src/create_metric_view.sql
