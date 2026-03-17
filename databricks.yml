@@ -13,8 +13,17 @@ variables:
     description: "SQL warehouse ID for running metric view deployment"
 
 targets:
-  prod:
+  dev:
     default: true
+    mode: development
+    workspace:
+      host: https://e2-dogfood.staging.cloud.databricks.com/
+    variables:
+      catalog: "main"
+      schema: "default"
+      warehouse_id: "58aa1b363649e722"
+
+  prod:
     mode: production
     workspace:
       host: https://e2-demo-field-eng.cloud.databricks.com/
