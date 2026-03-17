@@ -1,0 +1,25 @@
+bundle:
+  name: metric-views
+
+include:
+  - resources/*.yml
+
+variables:
+  catalog:
+    default: "main"
+  schema:
+    default: "default"
+  warehouse_id:
+    description: "SQL warehouse ID for running metric view deployment"
+
+targets:
+  prod:
+    default: true
+    mode: production
+    workspace:
+      profile: e2-demo
+      root_path: /Workspace/Users/harsha.pasala@databricks.com/.bundle/${bundle.name}/${bundle.target}
+    variables:
+      catalog: "main"
+      schema: "default"
+      warehouse_id: "4b9b953939869799"
