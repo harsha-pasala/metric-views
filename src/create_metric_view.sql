@@ -6,7 +6,7 @@ WITH METRICS
 LANGUAGE YAML
 AS $$
   version: 1.1
-  comment: "Billing usage metrics for tracking DBU consumption across SKUs and clouds"
+  comment: "Billing Stuff"
   source: system.billing.usage
   filter: record_type = 'ORIGINAL'
 
