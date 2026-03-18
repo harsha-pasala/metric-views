@@ -6,7 +6,7 @@ WITH METRICS
 LANGUAGE YAML
 AS $$
   version: 1.1
-  comment: "Billing Stuff"
+  comment: "Billing Stuff Change"
   source: system.billing.usage
   filter: record_type = 'ORIGINAL'
 
